@@ -21,10 +21,10 @@ public class Barcode implements Comparable<Barcode>{
 	  throw new IllegalArgumentException("Bad Length!");
       }
       int getsum = 0;
-      for (int i = 0;i<zip.length()-1;i++){
-	  getsum+=Character.getNumericValue(_zip.charAt(i));
-      }
-      _checkDigit = (getsum+0)%10;
+      //for (int i = 0;i<zip.length()-1;i++){
+      //  getsum+=Character.getNumericValue(_zip.charAt(i));
+      //}
+      _checkDigit = (this.checkSum())%10;
       
   }
 
@@ -91,7 +91,8 @@ public class Barcode implements Comparable<Barcode>{
 	  if (second>first){
 	      return -1;}
       }
-      return 0;*/
+      return 0;
+      Ignore this stuff*/
       return this._zip.compareTo(other._zip);
   }
     
