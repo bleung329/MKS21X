@@ -21,9 +21,7 @@ public class Sorts{
 					wheretoswap = i+0;
 				}
 			}
-			temp = data[wheretoswap]+0;
-			data[j] = mem+0;
-			data[wheretoswap] = temp+0;
+			swappity(data,
 		}
 	}
 	public static void insertionSort(int[] data){
