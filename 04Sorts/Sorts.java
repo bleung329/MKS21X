@@ -8,7 +8,7 @@ public class Sorts{
 		temp=data[pos2];
 		data[pos2]=data[pos1];
 		data[pos1]=temp;
-		System.out.println(Arrays.toString(data));
+		//System.out.println(Arrays.toString(data));
 	}
 	public static void selectionSort(int[] data){
 		int mem=data[0];
@@ -27,9 +27,38 @@ public class Sorts{
 	}
 	public static void insertionSort(int[] data){
 	}
+	public static void bubbleSort(int[] data){
+		int in1 = 1;
+		int streak = 0;
+		while (true){
+			if (data[in1-1] >= data[in1]){
+				streak = 0;
+				swappity(data,in1,in1-1);
+			}else{
+				System.out.println("Fine" + in1);
+				streak+=1;
+				if (streak == data.length-1){
+					break;
+				}
+			}
+			System.out.println(Arrays.toString(data)+": "+(in1-1));
+			/*try{
+				Thread.sleep(500);
+			}
+			catch(InterruptedException e){
+				System.out.println("Nothing happened.");
+			}*/
+			if (in1 == data.length-1){
+				in1 = 0;
+			}
+			in1+=1;
+		}
+		System.out.println(Arrays.toString(data)+": DONE");
+			
+	}	
 	public static void main(String[] args){
-		int[] testdata= new int[] {5,4,3,2,1,0}; 
-		swappity(testdata,0,3);
-		selectionSort(testdata);
+		int[] testdata= new int[] {20,5,3,9,6,2,7,4}; 
+		//System.out.println("Try:");
+		bubbleSort(testdata);
 	}
 }
