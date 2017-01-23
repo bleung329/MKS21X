@@ -42,12 +42,12 @@ public class Sorts{
 				}
 			}
 			System.out.println(Arrays.toString(data)+": "+(in1-1));
-			/*try{
-				Thread.sleep(500);
+			try{
+				Thread.sleep(200);
 			}
 			catch(InterruptedException e){
 				System.out.println("Nothing happened.");
-			}*/
+			}
 			if (in1 == data.length-1){
 				in1 = 0;
 			}
